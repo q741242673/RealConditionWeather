@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A75F4C482A4CC48500FD0F78 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = A75F4C472A4CC48500FD0F78 /* RealityKitContent */; };
+		A75F4C4A2A4CC48500FD0F78 /* RealConditionWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C492A4CC48500FD0F78 /* RealConditionWeatherApp.swift */; };
+		A75F4C4C2A4CC48500FD0F78 /* SearchCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C4B2A4CC48500FD0F78 /* SearchCityView.swift */; };
+		A75F4C4E2A4CC48600FD0F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F4C4D2A4CC48600FD0F78 /* Assets.xcassets */; };
+		A75F4C512A4CC48600FD0F78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F4C502A4CC48600FD0F78 /* Preview Assets.xcassets */; };
+		A75F4C5B2A4DEDBE00FD0F78 /* CitySearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */; };
+		A75F4C612A4E1CC100FD0F78 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C602A4E1CC100FD0F78 /* CityCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A75F4C422A4CC48500FD0F78 /* RealConditionWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealConditionWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75F4C462A4CC48500FD0F78 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		A75F4C492A4CC48500FD0F78 /* RealConditionWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealConditionWeatherApp.swift; sourceTree = "<group>"; };
+		A75F4C4B2A4CC48500FD0F78 /* SearchCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityView.swift; sourceTree = "<group>"; };
+		A75F4C4D2A4CC48600FD0F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A75F4C502A4CC48600FD0F78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A75F4C572A4CC5F900FD0F78 /* RealConditionWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealConditionWeather.entitlements; sourceTree = "<group>"; };
+		A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearcher.swift; sourceTree = "<group>"; };
+		A75F4C602A4E1CC100FD0F78 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A75F4C3F2A4CC48500FD0F78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F4C482A4CC48500FD0F78 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A75F4C392A4CC48500FD0F78 = {
+			isa = PBXGroup;
+			children = (
+				A75F4C442A4CC48500FD0F78 /* RealConditionWeather */,
+				A75F4C452A4CC48500FD0F78 /* Packages */,
+				A75F4C432A4CC48500FD0F78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A75F4C432A4CC48500FD0F78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C422A4CC48500FD0F78 /* RealConditionWeather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A75F4C442A4CC48500FD0F78 /* RealConditionWeather */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C492A4CC48500FD0F78 /* RealConditionWeatherApp.swift */,
+				A75F4C5E2A4E1C8E00FD0F78 /* Views */,
+				A75F4C5C2A4E1C6200FD0F78 /* Utils */,
+				A75F4C5D2A4E1C7C00FD0F78 /* Resources */,
+			);
+			path = RealConditionWeather;
+			sourceTree = "<group>";
+		};
+		A75F4C452A4CC48500FD0F78 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C462A4CC48500FD0F78 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		A75F4C4F2A4CC48600FD0F78 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C502A4CC48600FD0F78 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A75F4C5C2A4E1C6200FD0F78 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A75F4C5D2A4E1C7C00FD0F78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C4D2A4CC48600FD0F78 /* Assets.xcassets */,
+				A75F4C572A4CC5F900FD0F78 /* RealConditionWeather.entitlements */,
+				A75F4C4F2A4CC48600FD0F78 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A75F4C5E2A4E1C8E00FD0F78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C5F2A4E1CB000FD0F78 /* SearchCity */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A75F4C5F2A4E1CB000FD0F78 /* SearchCity */ = {
+			isa = PBXGroup;
+			children = (
+				A75F4C4B2A4CC48500FD0F78 /* SearchCityView.swift */,
+				A75F4C602A4E1CC100FD0F78 /* CityCell.swift */,
+			);
+			path = SearchCity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A75F4C412A4CC48500FD0F78 /* RealConditionWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75F4C542A4CC48600FD0F78 /* Build configuration list for PBXNativeTarget "RealConditionWeather" */;
+			buildPhases = (
+				A75F4C3E2A4CC48500FD0F78 /* Sources */,
+				A75F4C3F2A4CC48500FD0F78 /* Frameworks */,
+				A75F4C402A4CC48500FD0F78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealConditionWeather;
+			packageProductDependencies = (
+				A75F4C472A4CC48500FD0F78 /* RealityKitContent */,
+			);
+			productName = RealConditionWeather;
+			productReference = A75F4C422A4CC48500FD0F78 /* RealConditionWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A75F4C3A2A4CC48500FD0F78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A75F4C412A4CC48500FD0F78 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A75F4C3D2A4CC48500FD0F78 /* Build configuration list for PBXProject "RealConditionWeather" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A75F4C392A4CC48500FD0F78;
+			productRefGroup = A75F4C432A4CC48500FD0F78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A75F4C412A4CC48500FD0F78 /* RealConditionWeather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A75F4C402A4CC48500FD0F78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F4C512A4CC48600FD0F78 /* Preview Assets.xcassets in Resources */,
+				A75F4C4E2A4CC48600FD0F78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A75F4C3E2A4CC48500FD0F78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F4C4C2A4CC48500FD0F78 /* SearchCityView.swift in Sources */,
+				A75F4C4A2A4CC48500FD0F78 /* RealConditionWeatherApp.swift in Sources */,
+				A75F4C612A4E1CC100FD0F78 /* CityCell.swift in Sources */,
+				A75F4C5B2A4DEDBE00FD0F78 /* CitySearcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A75F4C522A4CC48600FD0F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		A75F4C532A4CC48600FD0F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		A75F4C552A4CC48600FD0F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RealConditionWeather/Resources/RealConditionWeather.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealConditionWeather/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = LYG6796H6N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperignon.RealConditionWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		A75F4C562A4CC48600FD0F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RealConditionWeather/Resources/RealConditionWeather.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealConditionWeather/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = LYG6796H6N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperignon.RealConditionWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A75F4C3D2A4CC48500FD0F78 /* Build configuration list for PBXProject "RealConditionWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75F4C522A4CC48600FD0F78 /* Debug */,
+				A75F4C532A4CC48600FD0F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75F4C542A4CC48600FD0F78 /* Build configuration list for PBXNativeTarget "RealConditionWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75F4C552A4CC48600FD0F78 /* Debug */,
+				A75F4C562A4CC48600FD0F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A75F4C472A4CC48500FD0F78 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A75F4C3A2A4CC48500FD0F78 /* Project object */;
+}
