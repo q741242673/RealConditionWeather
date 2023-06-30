@@ -26,13 +26,11 @@ struct CityCell: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack(alignment: .firstTextBaseline, spacing: 4) {
             Text(attributedTitle)
-                .foregroundStyle(.primary)
 
             Text(result.subtitle)
                 .font(.caption)
-                .foregroundStyle(.secondary)
         }
     }
 }

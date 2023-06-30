@@ -21,9 +21,22 @@ struct SearchCityView: View {
             TextField("Search City", text: $citySearcher.userInput)
                 .textFieldStyle(.roundedBorder)
 
-            List(citySearcher.results, id: \.self) { result in
+            List(citySearcher.results, id: \.hash) { result in
                 Button(action: {}) {
                     CityCell(result: result)
+                }
+                .foregroundStyle(.primary)
+            }
+            .overlay {
+                if citySearcher.results.isEmpty && citySearcher.userInput.isEmpty {
+                    ContentUnavailableView("Search for a Place",
+                                           systemImage: "cloud.sun",
+                                           description: Text("Where do you want to go?"))
+                }
+            }
+            .overlay {
+                if citySearcher.results.isEmpty && !citySearcher.userInput.isEmpty {
+                    ContentUnavailableView.search(text: citySearcher.userInput)
                 }
             }
         }

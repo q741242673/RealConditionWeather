@@ -7,9 +7,10 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 
 final class CitySearcher: NSObject, ObservableObject {
-    var userInput = "" {
+    @Published var userInput = "" {
         didSet {
             completer.queryFragment = userInput
         }
@@ -29,6 +30,8 @@ final class CitySearcher: NSObject, ObservableObject {
 
 extension CitySearcher: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-        results = completer.results
+        withAnimation {
+            results = completer.results
+        }
     }
 }
