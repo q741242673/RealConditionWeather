@@ -13,11 +13,10 @@ struct CityCell: View {
 
     private var attributedTitle: AttributedString {
         var attributedString = AttributedString(result.title)
+        attributedString.font = .body
 
         for currentRange in result.titleHighlightRanges {
-            guard let nsRange = currentRange as? NSRange,
-                  let range = Range(nsRange, in: attributedString)
-            else { continue }
+            guard let nsRange = currentRange as? NSRange, let range = Range(nsRange, in: attributedString) else { continue }
 
             attributedString[range].font = .system(.body, weight: .bold)
         }

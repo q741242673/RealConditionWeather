@@ -14,6 +14,7 @@
 		A75F4C512A4CC48600FD0F78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F4C502A4CC48600FD0F78 /* Preview Assets.xcassets */; };
 		A75F4C5B2A4DEDBE00FD0F78 /* CitySearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */; };
 		A75F4C612A4E1CC100FD0F78 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F4C602A4E1CC100FD0F78 /* CityCell.swift */; };
+		A764597E2A58B26D00E30C24 /* Logger+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764597D2A58B26D00E30C24 /* Logger+Init.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A75F4C572A4CC5F900FD0F78 /* RealConditionWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealConditionWeather.entitlements; sourceTree = "<group>"; };
 		A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearcher.swift; sourceTree = "<group>"; };
 		A75F4C602A4E1CC100FD0F78 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		A764597D2A58B26D00E30C24 /* Logger+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Init.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A75F4C5A2A4DEDBE00FD0F78 /* CitySearcher.swift */,
+				A764597D2A58B26D00E30C24 /* Logger+Init.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				A75F4C4C2A4CC48500FD0F78 /* SearchCityView.swift in Sources */,
 				A75F4C4A2A4CC48500FD0F78 /* RealConditionWeatherApp.swift in Sources */,
+				A764597E2A58B26D00E30C24 /* Logger+Init.swift in Sources */,
 				A75F4C612A4E1CC100FD0F78 /* CityCell.swift in Sources */,
 				A75F4C5B2A4DEDBE00FD0F78 /* CitySearcher.swift in Sources */,
 			);
