@@ -8,20 +8,15 @@
 import CoreLocation
 import Foundation
 import MapKit
+import Observation
 import SwiftUI
 
-final class CitySearcher: NSObject, ObservableObject {
-    @Published var userInput = "" {
-        didSet {
-            completer.queryFragment = userInput
-        }
-    }
-    @Published var results = [MKLocalSearchCompletion]()
-
-    private let completer: MKLocalSearchCompleter
+@Observable
+final class CitySearcher: NSObject {
+    var completer = MKLocalSearchCompleter()
+    var results = [MKLocalSearchCompletion]()
 
     override init() {
-        completer = MKLocalSearchCompleter()
         super.init()
 
         completer.delegate = self
@@ -35,6 +30,8 @@ final class CitySearcher: NSObject, ObservableObject {
         return placemarks.first?.location
     }
 }
+
+// MARK: - MKLocalSearchCompleterDelegate
 
 extension CitySearcher: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {

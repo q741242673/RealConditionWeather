@@ -10,8 +10,7 @@ import MapKit
 import SwiftUI
 
 struct SearchCityView: View {
-    @StateObject private var citySearcher = CitySearcher()
-
+    @State private var citySearcher = CitySearcher()
     @State private var isShowingErrorAlert = false
 
     var body: some View {
@@ -22,7 +21,7 @@ struct SearchCityView: View {
                 .font(.headline)
                 .padding(.bottom, 16)
 
-            TextField("Search City", text: $citySearcher.userInput)
+            TextField("Search City", text: $citySearcher.completer.queryFragment)
                 .textFieldStyle(.roundedBorder)
 
             List(citySearcher.results, id: \.hash) { result in
@@ -35,10 +34,10 @@ struct SearchCityView: View {
             }
             .overlay {
                 if citySearcher.results.isEmpty {
-                    if citySearcher.userInput.isEmpty {
+                    if citySearcher.completer.queryFragment.isEmpty {
                         ContentUnavailableView("Search for a Place", systemImage: "cloud.sun", description: Text("where are we going today?"))
                     } else {
-                        ContentUnavailableView.search(text: citySearcher.userInput)
+                        ContentUnavailableView.search(text: citySearcher.completer.queryFragment)
                     }
                 }
             }
