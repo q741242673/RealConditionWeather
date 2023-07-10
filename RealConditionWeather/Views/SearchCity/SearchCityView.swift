@@ -10,8 +10,12 @@ import MapKit
 import SwiftUI
 
 struct SearchCityView: View {
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+
     @State private var citySearcher = CitySearcher()
     @State private var isShowingErrorAlert = false
+
+    @Binding var weatherLocation: CLLocation?
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -56,7 +60,9 @@ struct SearchCityView: View {
                     return
                 }
 
-                // TODO: Do something with CLLocation
+                weatherLocation = location
+
+                await openImmersiveSpace(id: RealConditionWeatherApp.immersiveSpace)
             } catch {
                 isShowingErrorAlert = true
 
@@ -68,5 +74,5 @@ struct SearchCityView: View {
 }
 
 #Preview {
-    SearchCityView()
+    SearchCityView(weatherLocation: .constant(CLLocation(latitude: 0, longitude: 0)))
 }
