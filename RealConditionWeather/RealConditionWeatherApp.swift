@@ -5,7 +5,6 @@
 //  Created by Valentin Perignon on 28/06/2023.
 //
 
-import CoreLocation
 import SwiftUI
 
 @main
@@ -13,16 +12,17 @@ struct RealConditionWeatherApp: App {
     static let mainWindow = "SearchWindow"
     static let immersiveSpace = "ImmersiveSpace"
 
+    @State private var model = RealConditionModel()
     @State private var immersionStyle: ImmersionStyle = .mixed
-    @State private var weatherLocation: CLLocation?
 
     var body: some Scene {
         WindowGroup("Real Condition Weather", id: Self.mainWindow) {
-            SearchCityView(weatherLocation: $weatherLocation)
+            MainView()
+                .environment(model)
         }
 
         ImmersiveSpace(id: Self.immersiveSpace) {
-            Text("Coucou -> \(weatherLocation.debugDescription)")
+            Text("Coucou")
         }
         .immersionStyle(selection: $immersionStyle, in: .mixed)
     }
