@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct WeatherView: View {
+    let city: City
+
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Coucou")
+        }
+        .navigationTitle("\(city.name), \(city.country)")
     }
 }
 
 #Preview {
-    WeatherView()
+    WeatherView(city: .paris)
 }

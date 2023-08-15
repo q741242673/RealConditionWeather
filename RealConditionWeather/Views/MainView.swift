@@ -9,8 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        NavigationStack {
-            SearchCityView()
+        NavigationSplitView {
+            List(City.allCities) { city in
+                NavigationLink(value: city) {
+                    Text(city.name)
+                }
+            }
+            .navigationDestination(for: City.self) { city in
+                WeatherView(city: city)
+            }
+        } detail: {
+            WeatherView(city: .paris)
         }
     }
 }
