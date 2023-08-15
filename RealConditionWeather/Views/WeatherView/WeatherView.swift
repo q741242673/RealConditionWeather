@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct WeatherView: View {
-    @Environment(RealConditionModel.self) private var model
-
     var body: some View {
         Text("Hello, World!")
     }
@@ -17,5 +15,4 @@ struct WeatherView: View {
 
 #Preview {
     WeatherView()
-        .environment(RealConditionModel())
 }

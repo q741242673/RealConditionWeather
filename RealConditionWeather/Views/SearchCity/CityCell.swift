@@ -17,7 +17,6 @@ struct CityCell: View {
 
         for currentRange in result.titleHighlightRanges {
             guard let nsRange = currentRange as? NSRange, let range = Range(nsRange, in: attributedString) else { continue }
-
             attributedString[range].font = .system(.body, weight: .bold)
         }
 

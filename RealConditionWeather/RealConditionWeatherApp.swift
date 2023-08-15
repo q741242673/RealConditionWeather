@@ -9,21 +9,21 @@ import SwiftUI
 
 @main
 struct RealConditionWeatherApp: App {
-    static let mainWindow = "SearchWindow"
-    static let immersiveSpace = "ImmersiveSpace"
-
-    @State private var model = RealConditionModel()
-    @State private var immersionStyle: ImmersionStyle = .mixed
-
     var body: some Scene {
-        WindowGroup("Real Condition Weather", id: Self.mainWindow) {
+        WindowGroup(id: Self.mainWindow) {
             MainView()
-                .environment(model)
         }
 
+        // TODO: Add Immersive space with real weather conditions
         ImmersiveSpace(id: Self.immersiveSpace) {
-            Text("Coucou")
+            Text("Immersive view goes here.")
         }
-        .immersionStyle(selection: $immersionStyle, in: .mixed)
     }
+}
+
+// MARK: - Scene ids
+
+extension RealConditionWeatherApp {
+    static let mainWindow = "MainWindow"
+    static let immersiveSpace = "ImmersiveSpace"
 }
