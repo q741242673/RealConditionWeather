@@ -10,14 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationSplitView {
-            List(City.allCities) { city in
-                NavigationLink(value: city) {
-                    Text(city.name)
-                }
-            }
-            .navigationDestination(for: City.self) { city in
-                WeatherView(city: city)
-            }
+            CitiesList()
         } detail: {
             WeatherView(city: .paris)
         }
