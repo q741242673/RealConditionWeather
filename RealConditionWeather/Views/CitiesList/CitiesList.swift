@@ -11,7 +11,7 @@ struct CitiesList: View {
     var body: some View {
         List(City.allCities) { city in
             NavigationLink(value: city) {
-                Text(city.name)
+                CityCell(city: city)
             }
         }
         .navigationDestination(for: City.self) { city in

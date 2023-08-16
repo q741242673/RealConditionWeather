@@ -16,6 +16,7 @@
 		A764597E2A58B26D00E30C24 /* Logger+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764597D2A58B26D00E30C24 /* Logger+Init.swift */; };
 		A78157BB2A8C278E002BE0E0 /* City+Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78157BA2A8C278E002BE0E0 /* City+Examples.swift */; };
 		A78157BE2A8C2DA7002BE0E0 /* CitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78157BD2A8C2DA7002BE0E0 /* CitiesList.swift */; };
+		A78157C02A8CB21D002BE0E0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78157BF2A8CB21D002BE0E0 /* CityCell.swift */; };
 		A7B69B742A8C236D00838886 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B69B732A8C236D00838886 /* City.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A764597D2A58B26D00E30C24 /* Logger+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Init.swift"; sourceTree = "<group>"; };
 		A78157BA2A8C278E002BE0E0 /* City+Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Examples.swift"; sourceTree = "<group>"; };
 		A78157BD2A8C2DA7002BE0E0 /* CitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesList.swift; sourceTree = "<group>"; };
+		A78157BF2A8CB21D002BE0E0 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		A7B69B732A8C236D00838886 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A78157BD2A8C2DA7002BE0E0 /* CitiesList.swift */,
+				A78157BF2A8CB21D002BE0E0 /* CityCell.swift */,
 			);
 			path = CitiesList;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				A7175A2F2A5DF25F00F644ED /* MainView.swift in Sources */,
 				A75F4C4A2A4CC48500FD0F78 /* RealConditionWeatherApp.swift in Sources */,
 				A764597E2A58B26D00E30C24 /* Logger+Init.swift in Sources */,
+				A78157C02A8CB21D002BE0E0 /* CityCell.swift in Sources */,
 				A75F4C5B2A4DEDBE00FD0F78 /* CitySearcher.swift in Sources */,
 				A7B69B742A8C236D00838886 /* City.swift in Sources */,
 				A7175A362A5DF5B100F644ED /* WeatherView.swift in Sources */,

@@ -14,7 +14,7 @@ struct WeatherView: View {
         VStack {
             Text("Coucou")
         }
-        .navigationTitle("\(city.name), \(city.country)")
+        .navigationTitle("\(city.name)")
     }
 }
 
