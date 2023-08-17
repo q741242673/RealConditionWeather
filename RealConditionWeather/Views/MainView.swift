@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var currentCity: City? = .paris
+    @State private var citySearcher = CitySearcher()
+
     var body: some View {
         NavigationSplitView {
-            CitiesList()
+            CitiesList(currenCity: $currentCity, citySearcher: $citySearcher)
         } detail: {
-            WeatherView(city: .paris)
+            WeatherView(city: currentCity ?? .paris)
         }
+        .searchable(text: $citySearcher.completer.queryFragment)
     }
 }
 

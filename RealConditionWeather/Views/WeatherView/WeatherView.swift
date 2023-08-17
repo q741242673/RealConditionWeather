@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct WeatherView: View {
-    @State private var isShowingSearchSheet = false
-
     let city: City
 
     var body: some View {
@@ -17,19 +15,6 @@ struct WeatherView: View {
             Text("Coucou")
         }
         .navigationTitle("\(city.name)")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    isShowingSearchSheet = true
-                } label: {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-
-            }
-        }
-        .sheet(isPresented: $isShowingSearchSheet) {
-            SearchCityView()
-        }
     }
 }
 
