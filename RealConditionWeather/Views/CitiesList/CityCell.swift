@@ -9,15 +9,15 @@ import CoreLocation
 import SwiftUI
 
 struct CityCell: View {
-    @State private var timezone: TimeZone?
+    @State private var placemark: CLPlacemark?
 
     let city: City
 
-    private var dateFormatter: Date.FormatStyle {
+    private var dateFormatter: Date.FormatStyle? {
+        guard let timeZone = placemark?.timeZone else { return nil }
+
         var formatter = Date.FormatStyle.dateTime.hour().minute()
-        if let timezone {
-            formatter.timeZone = timezone
-        }
+        formatter.timeZone = timeZone
         return formatter
     }
 
@@ -28,7 +28,7 @@ struct CityCell: View {
                     .font(.headline)
 
                 Group {
-                    if let timezone {
+                    if let dateFormatter {
                         Text(Date.now, format: dateFormatter)
                     } else {
                         Text("--:--")
@@ -44,8 +44,7 @@ struct CityCell: View {
                 .font(.title)
         }
         .task {
-            guard let placemark = try? await CLGeocoder().reverseGeocodeLocation(city.location).first else { return }
-            timezone = placemark.timeZone
+            placemark = try? await city.fetchPlacemark()
         }
     }
 }

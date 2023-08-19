@@ -8,31 +8,40 @@
 import CoreLocation
 import MapKit
 
-// TODO: Bring SwiftData when @Model is supported on VisionOS
+// TODO: Bring SwiftData when @Model get supported on VisionOS
 
 final class City: Identifiable {
-    var id: CLLocationCoordinate2D { location.coordinate }
-
     var name: String
-    var location: CLLocation
+    var country: String
+    var placemark: CLPlacemark?
 
-    init(name: String, location: CLLocation) {
+    init(name: String, country: String) {
         self.name = name
-        self.location = location
+        self.country = country
     }
 
-    convenience init?(from result: MKLocalSearchCompletion) async {
-        guard let location = try? await result.transformToLocation() else { return nil }
-        self.init(name: result.title, location: location)
+    convenience init(searchCompletion: MKLocalSearchCompletion) {
+        self.init(name: searchCompletion.title, country: searchCompletion.subtitle)
+    }
+
+    func fetchPlacemark() async throws -> CLPlacemark? {
+        guard placemark == nil else { return placemark }
+
+        let geocoder = CLGeocoder()
+        let placemarks = try await geocoder.geocodeAddressString("\(name), \(country)")
+        placemark = placemarks.first
+
+        return placemark
     }
 }
 
 extension City: Hashable {
     static func == (lhs: City, rhs: City) -> Bool {
-        return lhs.id == rhs.id
+        return lhs.name == rhs.name && lhs.country == rhs.country
     }
 
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
+        hasher.combine(name)
+        hasher.combine(country)
     }
 }

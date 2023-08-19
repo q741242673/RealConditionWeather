@@ -46,16 +46,9 @@ extension CitiesListModel: MKLocalSearchCompleterDelegate {
             return
         }
 
-        Task {
-            var newResults = [City]()
-            await withTaskGroup(of: Void.self) { group in
-                for result in completer.results {
-                    guard let city = await City(from: result) else { continue }
-                    newResults.append(city)
-                }
-            }
-            withAnimation {
-                cities = newResults
+        withAnimation {
+            cities = completer.results.map { searchCompletion in
+                City(searchCompletion: searchCompletion)
             }
         }
     }
