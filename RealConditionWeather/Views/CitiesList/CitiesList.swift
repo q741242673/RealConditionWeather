@@ -9,11 +9,12 @@ import MapKit
 import SwiftUI
 
 struct CitiesList: View {
+    @State private var model = CitiesListModel()
+
     @Binding var currenCity: City?
-    @Binding var citySearcher: CitySearcher
 
     var body: some View {
-        List(citySearcher.results, selection: $currenCity) { city in
+        List(model.cities, selection: $currenCity) { city in
             NavigationLink(value: city) {
                 CityCell(city: city)
             }
@@ -22,14 +23,15 @@ struct CitiesList: View {
         .navigationDestination(for: City.self) { city in
             WeatherView(city: city)
         }
+        .searchable(text: $model.searchText)
         .overlay {
-            if citySearcher.hasNoResult {
-                ContentUnavailableView.search(text: citySearcher.completer.queryFragment)
+            if model.hasNoResult {
+                ContentUnavailableView.search(text: model.searchText)
             }
         }
     }
 }
 
 #Preview {
-    CitiesList(currenCity: .constant(.paris), citySearcher: .constant(CitySearcher()))
+    CitiesList(currenCity: .constant(.paris))
 }

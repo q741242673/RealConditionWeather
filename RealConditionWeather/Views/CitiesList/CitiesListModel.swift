@@ -12,12 +12,21 @@ import Observation
 import SwiftUI
 
 @Observable
-final class CitySearcher: NSObject {
-    var completer = MKLocalSearchCompleter()
-    private(set) var results = City.allCities
+final class CitiesListModel: NSObject {
+    private var completer = MKLocalSearchCompleter()
+
+    var searchText = "" {
+        didSet {
+            completer.queryFragment = searchText
+            if searchText.isEmpty {
+                getStoredCities()
+            }
+        }
+    }
+    private(set) var cities = City.allCities
 
     var hasNoResult: Bool {
-        return !completer.queryFragment.isEmpty && results.isEmpty
+        return !searchText.isEmpty && cities.isEmpty
     }
 
     override init() {
@@ -30,12 +39,10 @@ final class CitySearcher: NSObject {
 
 // MARK: - MKLocalSearchCompleterDelegate
 
-extension CitySearcher: MKLocalSearchCompleterDelegate {
+extension CitiesListModel: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         guard !completer.queryFragment.isEmpty else {
-            withAnimation {
-                results = City.allCities
-            }
+            getStoredCities()
             return
         }
 
@@ -48,8 +55,14 @@ extension CitySearcher: MKLocalSearchCompleterDelegate {
                 }
             }
             withAnimation {
-                results = newResults
+                cities = newResults
             }
+        }
+    }
+
+    private func getStoredCities() {
+        withAnimation {
+            cities = City.allCities
         }
     }
 }
